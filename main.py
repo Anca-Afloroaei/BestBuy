@@ -1,7 +1,11 @@
 from products import Product
 from store import Store
 
+
 def start(store: Store):
+    """
+    Launches the interactive user interface for the store.
+    """
     while True:
         print("\n--- Welcome to Best Buy ---")
         print("1. List all products in store")
@@ -60,8 +64,11 @@ def start(store: Store):
         else:
             print("Invalid choice. Please enter a number from 1 to 4.")
 
+
 def main():
-    # setup initial stock of inventory
+    """
+    Initializes the default product inventory and starts the store UI.
+    """
     product_list = [
         Product("MacBook Air M2", price=1450, quantity=100),
         Product("Bose QuietComfort Earbuds", price=250, quantity=500),
@@ -70,6 +77,7 @@ def main():
     best_buy = Store(product_list)
 
     start(best_buy)
+
 
 if __name__ == "__main__":
     main()
